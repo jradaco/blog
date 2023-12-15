@@ -18,8 +18,8 @@
 
 <style>
     article{
-        margin-left: 60px;
-        margin-right: 60px;
+        margin-left: 30px;
+        margin-right: 30px;
     }
 
     h1 {
