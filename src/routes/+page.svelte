@@ -45,7 +45,7 @@
 
     /* Style the main headline */
     h1 {
-        font-size: 4em;
+        font-size: 3em;
         margin-top: 10px;
         margin-bottom: 10px;
     }
@@ -84,8 +84,8 @@
     }
 
     article{
-        margin-left: 60px;
-        margin-right: 60px;
+        margin-left: 30px;
+        margin-right: 30px;
     }
 
 </style>
