@@ -8,19 +8,21 @@
 </script>
 
 <header>
-    <h2>Hey there! this is ...</h2>
+    <!--h2>Howdy! this is ...</h2-->
     <h1>INTERCOSAS</h1>
     <p>Tech and Internet of Things (IoT) blog</p>
 </header>
 
 <main>
     
+    
     <article>
+        <h3 class="late"> Latest entries:</h3>
         <hr>
         
             {#each nodes as {node: { number, title, slug, abstract, createdAt }}}
                 
-               <p><a href='/post/{slug}-{number}'>{title}</a> / Published {new Date(createdAt).toDateString()}</p> 
+               <p class="entry" ><a href='/post/{slug}-{number}'>{title}</a> / Published {new Date(createdAt).toDateString()}</p> 
                 
                 
             {/each}
@@ -48,6 +50,7 @@
         font-size: 3em;
         margin-top: 10px;
         margin-bottom: 10px;
+        text-shadow: 4px 4px 0px #6fd1bd;
     }
 
     h2 {
@@ -59,16 +62,20 @@
         height : 4px;
         background-color: black;
         margin-bottom: 40px;
+        box-shadow: 4px 4px 0px #6fd1bd;
     }
 
     /* Style the description */
     header p {
         margin-bottom: 40px;
         font-size: 1.2em;
+        /*color: #736fd2;*/
         color: gray;
+        text-decoration: underline #6fd1bd;
+        font-weight: bold;
     }
 
-    article p {
+    .entry {
         border-bottom: 2px dotted gray;
         padding-bottom: 20px;
         margin-bottom: 20px;
@@ -76,10 +83,16 @@
         color: gray;
     }
 
+    .late{
+        color: grey;
+        text-decoration: underline #6fd1bd;
+    }
+
     a{
         text-decoration: none;
         color: black;
         font-weight: bold;
+        background-color:  #6fd1bd;
         
     }
 

@@ -10,7 +10,7 @@
 <style>
 
     :global(body){
-        background-color: #efefef;
+        background-color: #ffffff;
     }
     .wrapper{
         /*font-family: 'Lato', sans-serif;*/
