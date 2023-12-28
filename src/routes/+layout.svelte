@@ -1,21 +1,7 @@
 <script>
-    import '@fontsource/lato';
+    import Navbar from './Navbar.svelte';
 </script>
 
+<Navbar />
+<slot />
 
-<div class="wrapper">
-    <slot />
-</div>
-
-<style>
-
-    :global(body){
-        background-color: #ffffff;
-    }
-    .wrapper{
-        /*font-family: 'Lato', sans-serif;*/
-        font-family: Arial, sans-serif;
-        
-    }
-
-</style>

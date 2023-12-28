@@ -1,5 +1,6 @@
 <script>
   import { parse } from 'svelte/compiler';
+  import Hero from './Hero.svelte';
 
     export let data;
 
@@ -7,18 +8,13 @@
     $: (console.log(nodes))
 </script>
 
-<header>
-    <!--h2>Howdy! this is ...</h2-->
-    <h1>INTERCOSAS</h1>
-    <p>Tech and Internet of Things (IoT) blog</p>
-</header>
+<Hero />
 
-<main>
+<main class="container">
     
     
     <article>
-        <h3 class="late"> Latest entries:</h3>
-        <hr>
+        
         
             {#each nodes as {node: { number, title, slug, abstract, createdAt }}}
                 
@@ -32,73 +28,32 @@
 
 <style>
 
-    /* Reset some basic elements */
-    h1, h2, p {
-        margin: 0;
-        padding: 0;
-    }
-
-    /* Style the header */
-    header {
-        text-align: center;
-        margin-bottom: 50px;
-    }
-
-
-    /* Style the main headline */
-    h1 {
-        font-size: 3em;
-        margin-top: 10px;
-        margin-bottom: 10px;
-        text-shadow: 4px 4px 0px #6fd1bd;
-    }
-
-    h2 {
-        margin-bottom: 20px;
-    }
-
     /* Style the articles */
-    hr {
-        height : 4px;
-        background-color: black;
-        margin-bottom: 40px;
-        box-shadow: 4px 4px 0px #6fd1bd;
-    }
-
+    
     /* Style the description */
-    header p {
-        margin-bottom: 40px;
-        font-size: 1.2em;
-        /*color: #736fd2;*/
-        color: gray;
-        text-decoration: underline #6fd1bd;
-        font-weight: bold;
-    }
 
     .entry {
-        border-bottom: 2px dotted gray;
+        border-bottom: 2px solid #112e54 ;
         padding-bottom: 20px;
         margin-bottom: 20px;
-        font-size: 1.2em;
-        color: gray;
+        font-size: 1.4em;
+        color: #2b70c9;
     }
 
     .late{
         color: grey;
-        text-decoration: underline #6fd1bd;
+        text-decoration: underline #2b70c9;
     }
 
     a{
         text-decoration: none;
-        color: black;
+        color: #112e54;
         font-weight: bold;
-        background-color:  #6fd1bd;
+        /*background-color:  #2b70c9;*/
         
     }
 
-    article{
-        margin-left: 30px;
-        margin-right: 30px;
-    }
+    
+
 
 </style>
